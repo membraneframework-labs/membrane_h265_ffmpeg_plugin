@@ -78,13 +78,13 @@ UNIFEX_TERM create(UnifexEnv *env, int width, int height, char *pix_fmt,
 
   if (strcmp("nil", profile) != 0) {
     if (strcmp("main", profile) == 0) {
-        state->codec_ctx->profile = FF_PROFILE_HEVC_MAIN;
+        state->codec_ctx->profile = AV_PROFILE_HEVC_MAIN;
     } else if (strcmp("main_10", profile) == 0) {
-        state->codec_ctx->profile = FF_PROFILE_HEVC_MAIN_10;
+        state->codec_ctx->profile = AV_PROFILE_HEVC_MAIN_10;
     } else if (strcmp("main_still_picture", profile) == 0) {
-        state->codec_ctx->profile = FF_PROFILE_HEVC_MAIN_STILL_PICTURE;
+        state->codec_ctx->profile = AV_PROFILE_HEVC_MAIN_STILL_PICTURE;
     } else {
-        state->codec_ctx->profile = FF_PROFILE_HEVC_REXT;
+        state->codec_ctx->profile = AV_PROFILE_HEVC_REXT;
     }
   }
 
